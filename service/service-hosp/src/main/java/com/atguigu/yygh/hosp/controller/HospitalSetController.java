@@ -1,6 +1,5 @@
 package com.atguigu.yygh.hosp.controller;
 
-import com.atguigu.yygh.common.exception.YyghException;
 import com.atguigu.yygh.common.result.Result;
 import com.atguigu.yygh.common.utils.MD5;
 import com.atguigu.yygh.hosp.service.HospitalSetService;
@@ -10,18 +9,17 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.tomcat.util.security.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.ResultSet;
 import java.util.List;
 import java.util.Random;
 
 @Api(tags = "医院设置管理")
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
+@CrossOrigin
 public class HospitalSetController {
     @Autowired
     private HospitalSetService hospitalSetService;
