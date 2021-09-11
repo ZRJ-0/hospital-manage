@@ -11,6 +11,25 @@
 
     <artifactId>service-cmn</artifactId>
     <packaging>jar</packaging>
+    <name>service-cmn</name>
+    <description>service-cmn</description>
 
-    
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+    </dependency>
+
+    </dependencies>
+
+<build>
+    <finalName>service-cmn</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+    </plugins>
+</build>
+
 </project>

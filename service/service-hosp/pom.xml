@@ -12,6 +12,14 @@
     <artifactId>service-hosp</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <!--  Mongo  -->
+	    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>service-hosp</finalName>
         <plugins>

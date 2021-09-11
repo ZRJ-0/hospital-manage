@@ -1,7 +1,9 @@
 package com.atguigu.yygh.model.cmn;
 
-import com.atguigu.yygh.model.base.BaseEntity;
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,6 +27,7 @@ public class Dict {
 
     private static final long serialVersionUID = 1L;
 
+    //  使用@TableId(type = IdType.AUTO)存在问题  因为插入的数据id值不是自动增长的   而是手动设置的
     @ApiModelProperty(value = "id")
     private Long id;
 
@@ -39,12 +42,12 @@ public class Dict {
 
     @ApiModelProperty(value = "逻辑删除(1:已删除，0:未删除)")
     @TableLogic
-    @TableField("is_deleted")
+    @TableField(value = "is_deleted", fill = FieldFill.INSERT)
     private Integer isDeleted;
 
     @ApiModelProperty(value = "其他参数")
     @TableField(exist = false)
-    private Map<String,Object> param = new HashMap<>();
+    private Map<String, Object> param = new HashMap<>();
 
     @ApiModelProperty(value = "上级id")
     @TableField("parent_id")
