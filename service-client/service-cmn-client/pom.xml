@@ -11,7 +11,8 @@
 
     <artifactId>service-cmn-client</artifactId>
     <packaging>jar</packaging>
+    <name>service-cmn-client</name>
+    <description>service-cmn-client</description>
 
 
-    
 </project>
