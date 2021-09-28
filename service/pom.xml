@@ -3,78 +3,71 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hospital-parent</artifactId>
-        <groupId>com.hosp</groupId>
+        <artifactId>yygh_parent</artifactId>
+        <groupId>com.atguigu</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
-	<!--  子模块  -->
-	<modules>
-        <module>service-cmn</module>
-        <module>service-hosp</module>
-        <module>service-order</module>
-        <module>service-oos</module>
-        <module>service-sms</module>
-        <module>service-statistics</module>
-        <module>service-task</module>
-        <module>service-user</module>
+    <modules>
+        <module>service_user</module>
+        <module>service_hosp</module>
+        <module>service_cmn</module>
+        <module>service_msm</module>
+        <module>service_oss</module>
+        <module>service_order</module>
+        <module>service_task</module>
+        <module>service_statistics</module>
     </modules>
-
     <dependencies>
         <dependency>
-            <groupId>com.hosp</groupId>
-            <artifactId>service-util</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hosp</groupId>
-            <artifactId>common-util</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hosp</groupId>
+            <groupId>com.atguigu</groupId>
             <artifactId>model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-	    <!--web-->
-	    <dependency>
+        <dependency>
+            <groupId>com.atguigu</groupId>
+            <artifactId>service_util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--web-->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-	    <!--mybatis-plus-->
-	    <dependency>
+        <!--mybatis-plus-->
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-	    <!--mysql-->
-	    <dependency>
+        <!--mysql-->
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-	    <!--开发者工具-->
-	    <dependency>
+        <!--开发者工具-->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-	    <!-- 服务调用feign -->
-	    <dependency>
+        <!-- 服务调用feign -->
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-	    <!-- 服务注册 -->
-	    <dependency>
-	        <groupId>com.alibaba.cloud</groupId>
-	        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-	    </dependency>
-	    <!--&lt;!&ndash; 流量控制 &ndash;&gt;-->
-	    <!--<dependency>-->
-	    <!--    <groupId>com.alibaba.cloud</groupId>-->
-	    <!--    <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
-	    <!--</dependency>-->
+        <!-- 服务注册 -->
+       <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- 流量控制 -->
+       <!-- <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -103,4 +96,5 @@
             </resource>
         </resources>
     </build>
+
 </project>

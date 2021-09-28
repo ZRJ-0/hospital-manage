@@ -1,5 +1,7 @@
 package com.atguigu.yygh.vo.hosp;
 
+import com.atguigu.yygh.model.hosp.Department;
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

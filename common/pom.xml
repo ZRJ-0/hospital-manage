@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hospital-parent</artifactId>
-        <groupId>com.hosp</groupId>
+        <artifactId>yygh_parent</artifactId>
+        <groupId>com.atguigu</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,9 +12,9 @@
     <artifactId>common</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>common-util</module>
-        <module>rabbit-util</module>
-        <module>service-util</module>
+        <module>common_util</module>
+        <module>service_util</module>
+        <module>rabbit_util</module>
     </modules>
 
     <dependencies>
@@ -45,6 +45,11 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
     </dependencies>
 
